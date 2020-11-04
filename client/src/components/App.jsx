@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import GameMenu from './GameMenu.jsx';
+import FriendsList from './FriendsList.jsx';
 
 export default class App extends React.Component {
   constructor(props){
@@ -11,7 +13,8 @@ export default class App extends React.Component {
   render () {
     return (
       <div>
-        SOME CONTENT
+        <GameMenu />
+        <FriendsList />
       </div>
     )
   }

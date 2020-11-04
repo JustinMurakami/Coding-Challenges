@@ -68,7 +68,7 @@ const randomNumber = (number) => {
 
 const createUser = () => {
   const user = {};
-  user.userName = faker.name.findName();
+  user.userName = faker.name.findName().replace(/'/g, "\'");
   user.email = faker.internet.email();
   user.password = faker.internet.password();
   user.region = `${regions[randomNumber(regions.length)]}`;
@@ -99,8 +99,8 @@ const createFriendship = () => {
 
 const createGame = () => {
   const game = {};
-  const apostropheEscapedGameName = faker.lorem.words().replace(/'/g, "\'");
-  game.gameName = apostropheEscapedGameName;
+  const escapedGameName = faker.lorem.words();
+  game.gameName = escapedGameName;
   game.coverImage = imageUrls[randomNumber(imageUrls.length)];
   game.type = gameTypes[randomNumber(gameTypes.length)];
   game.description = faker.lorem.sentences();

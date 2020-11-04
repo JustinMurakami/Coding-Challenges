@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon",
     "init-database": "mysql -u root <./database/schema.sql",
-    "build": "webpack -w",
+    "build": "webpack -d --watch",
     "dev": "live-server /client/public/index.html",
     "seed": "node ./database/seed.js"
   },
@@ -23,6 +23,7 @@
   "dependencies": {
     "axios": "0.19.2",
     "body-parser": "1.19.0",
+    "bootstrap": "^4.5.3",
     "cors": "2.8.5",
     "express": "4.17.1",
     "faker": "^5.1.0",
@@ -32,7 +33,10 @@
     "nodemon": "2.0.4",
     "path": "0.12.7",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "16.13.1",
+    "style-loader": "^2.0.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
