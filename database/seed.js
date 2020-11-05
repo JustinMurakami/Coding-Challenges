@@ -79,6 +79,20 @@ const createUser = () => {
   return user;
 };
 
+const createTeam = () => {
+  const team = {};
+  team.teamName = faker.name.jobDescriptor() + faker.name.jobType();
+  team.leaderId = randomNumber(100) + 1;
+  return team;
+}
+
+const createTeamMembership = () => {
+  const teamMembership = {};
+  teamMembership.teamId = randomNumber(numberOfTestRecords) + 1;
+  teamMembership.teamMemberId = randomNumber(numberOfTestRecords) + 1;
+  return teamMembership;
+}
+
 const createFriendship = () => {
   const friendship = {};
   friendship.userId = randomNumber(numberOfTestRecords) + 1;
@@ -130,6 +144,24 @@ const createFriendshipsForDatabase = () => {
   return friendships.filter((v,i,a) => a.findIndex(t => (t.userId === v.userId && t.friendId===v.friendId)) === i)
 }
 
+//create teams for database
+const createTeamsForDatabase = () => {
+  const teams = [];
+  for (let i = 0; i < numberOfTestRecords; i++) {
+    teams.push(createTeam());
+  }
+  return teams;
+}
+
+//create team member relationships for database
+const createTeamMembershipsForDatabase = () => {
+  const teamMembers = [];
+  for (let i = 0; i < numberOfTestRecords * 5; i++) {
+    teamMembers.push(createTeamMembership());
+  }
+  return teamMembers.filter((v, i, a) => a.findIndex(t => (t.teamId === v.teamId && t.teamMemberId === v.teamMemberId)) === i)
+}
+
 const createGamesForDatabase = () => {
   const games = [];
   for (let i = 0; i < numberOfTestRecords; i++) {
@@ -164,6 +196,26 @@ const insertFriendships = () => {
   });
 };
 
+//insert teams
+const insertTeams = () => {
+  const teams = createTeamsForDatabase();
+  teams.forEach((team) => {
+    const { teamName, leaderId } = team;
+    const queryString = `INSERT INTO teams (teamName, leaderId) VALUES ('${teamName}', ${leaderId});`;
+    database.query(queryString);
+  })
+}
+
+//insert teamMembers
+const insertTeamMembers = () => {
+  const teamMembers = createTeamMembershipsForDatabase();
+  teamMembers.forEach((teamMember) => {
+    const { teamId, teamMemberId } = teamMember;
+    const queryString = `INSERT INTO teamMembers (teamId, teamMemberId) VALUES (${teamId}, ${teamMemberId});`;
+    database.query(queryString);
+  })
+}
+
 const insertGames = () => {
   const games = createGamesForDatabase();
   games.forEach((game) => {
@@ -184,5 +236,7 @@ const insertUserGames = () => {
 
 insertUsers();
 insertFriendships();
+insertTeams();
+insertTeamMembers();
 insertGames();
 insertUserGames();

@@ -10,7 +10,7 @@ export default function GamesModal(props) {
           Game Type: {props.type}
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body style={{'maxHeight': 'calc(50vh - 100px)', 'overflowY': 'auto'}} >
         <GamesList type={props.type} handleClick={props.handleClick} />
       </Modal.Body>
       <Modal.Footer>

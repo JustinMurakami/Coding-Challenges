@@ -14,18 +14,32 @@ CREATE TABLE users (
   aboutMe varchar(20000) NOT NULL,
   profilePicture varchar(255) NOT NULL,
   onlineStatus varchar(255) NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (ID)
 );
 
 CREATE TABLE friendships (
   ID int AUTO_INCREMENT,
   userId int NOT NULL,
   friendId int NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE teams (
+  ID int AUTO_INCREMENT,
+  teamName varchar(255) NOT NULL,
+  leaderId int NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE teamMembers (
+  ID int AUTO_INCREMENT,
+  teamId int NOT NULL,
+  teamMemberId int NOT NULL,
+  PRIMARY KEY (ID)
 );
 
 CREATE TABLE invites (
-  id int AUTO_INCREMENT,
+  ID int AUTO_INCREMENT,
   senderId int NOT NULL,
   requestedId int NOT NULL,
   PRIMARY KEY (id)
@@ -38,12 +52,12 @@ CREATE TABLE games (
   type varchar(255) NOT NULL,
   description varchar (20000) NOT NULL,
   website varchar(255),
-  PRIMARY KEY (id)
+  PRIMARY KEY (ID)
 );
 
 CREATE TABLE userGames (
   ID int AUTO_INCREMENT,
   userId int NOT NULL,
   gameId int NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (ID)
 );
