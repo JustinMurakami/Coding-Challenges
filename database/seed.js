@@ -8,56 +8,56 @@ const regions = ['Bandle City', 'Bilgewater', 'Demacia', 'Ionia', 'Ixtal', 'Noxu
 const userTypes = ['beginner', 'casual gamer', 'master'];
 
 const imageUrls = [
-  'https://imgur.com/7jmtqlV',
-  'https://imgur.com/jtHNRuT',
-  'https://imgur.com/HknGx6i',
-  'https://imgur.com/TQDPnP2',
-  'https://imgur.com/W9dVKfO',
-  'https://imgur.com/Zsy5INv',
-  'https://imgur.com/lmh83wF',
-  'https://imgur.com/xM7CCuM',
-  'https://imgur.com/4Pbqvf6',
-  'https://imgur.com/Asdtvf6',
-  'https://imgur.com/BiNi2B3',
-  'https://imgur.com/sHfLcgF',
-  'https://imgur.com/R6Ds6vr',
-  'https://imgur.com/ANSijAF',
-  'https://imgur.com/SZCtbJl',
-  'https://imgur.com/SXAmVcy',
-  'https://imgur.com/vshTFIr',
-  'https://imgur.com/B45c3tK',
-  'https://imgur.com/c5sTio1',
-  'https://imgur.com/uNDwbg4',
-  'https://imgur.com/5btUScT',
-  'https://imgur.com/t97NDBj',
-  'https://imgur.com/N6Z460e',
-  'https://imgur.com/l46V7O5',
-  'https://imgur.com/IO352bd',
-  'https://imgur.com/AyUQ35p',
-  'https://imgur.com/Rekg5ym',
-  'https://imgur.com/koBiU6E',
-  'https://imgur.com/DclHjFh',
-  'https://imgur.com/Atmn7fY',
-  'https://imgur.com/yk2JZbM',
-  'https://imgur.com/KQVloLJ',
-  'https://imgur.com/bzf588c',
-  'https://imgur.com/9k4NbTH',
-  'https://imgur.com/jHa8VlI',
-  'https://imgur.com/uon0iZ7',
-  'https://imgur.com/tuagZ8j',
-  'https://imgur.com/1UUgV9a',
-  'https://imgur.com/VRZPyLh',
-  'https://imgur.com/b7kavU0',
-  'https://imgur.com/wwLjvBj',
-  'https://imgur.com/hJ6KjzO',
-  'https://imgur.com/jMt31Vx',
-  'https://imgur.com/t1pAQ0Y',
-  'https://imgur.com/HUgeEZN',
-  'https://imgur.com/DGrFYht',
-  'https://imgur.com/GwaFnsr',
-  'https://imgur.com/b6XVrXw',
-  'https://imgur.com/4JQx5Sr',
-  'https://imgur.com/otlQznY'
+  'https://i.imgur.com/otlQznY.jpg',
+  'https://i.imgur.com/4JQx5Sr.jpg',
+  'https://i.imgur.com/b6XVrXw.jpg',
+  'https://i.imgur.com/7jmtqlV.jpg',
+  'https://i.imgur.com/jtHNRuT.jpg',
+  'https://i.imgur.com/HknGx6i.jpg',
+  'https://i.imgur.com/TQDPnP2.jpg',
+  'https://i.imgur.com/W9dVKfO.jpg',
+  'https://i.imgur.com/lmh83wF.jpg',
+  'https://i.imgur.com/Zsy5INv.jpg',
+  'https://i.imgur.com/4Pbqvf6.jpg',
+  'https://i.imgur.com/xM7CCuM.jpg',
+  'https://i.imgur.com/Asdtvf6.jpg',
+  'https://i.imgur.com/BiNi2B3.jpg',
+  'https://i.imgur.com/sHfLcgF.jpg',
+  'https://i.imgur.com/c5sTio1.jpg',
+  'https://i.imgur.com/uNDwbg4.jpg',
+  'https://i.imgur.com/SZCtbJl.jpg',
+  'https://i.imgur.com/ANSijAF.jpg',
+  'https://i.imgur.com/R6Ds6vr.jpg',
+  'https://i.imgur.com/B45c3tK.jpg',
+  'https://i.imgur.com/vshTFIr.jpg',
+  'https://i.imgur.com/SXAmVcy.jpg',
+  'https://i.imgur.com/5btUScT.jpg',
+  'https://i.imgur.com/t97NDBj.jpg',
+  'https://i.imgur.com/DclHjFh.jpg',
+  'https://i.imgur.com/Atmn7fY.jpg',
+  'https://i.imgur.com/IO352bd.jpg',
+  'https://i.imgur.com/l46V7O5.jpg',
+  'https://i.imgur.com/N6Z460e.jpg',
+  'https://i.imgur.com/koBiU6E.jpg',
+  'https://i.imgur.com/Rekg5ym.jpg',
+  'https://i.imgur.com/AyUQ35p.jpg',
+  'https://i.imgur.com/HUgeEZN.jpg',
+  'https://i.imgur.com/t1pAQ0Y.jpg',
+  'https://i.imgur.com/tuagZ8j.jpg',
+  'https://i.imgur.com/uon0iZ7.jpg',
+  'https://i.imgur.com/wwLjvBj.jpg',
+  'https://i.imgur.com/hJ6KjzO.jpg',
+  'https://i.imgur.com/jMt31Vx.jpg',
+  'https://i.imgur.com/DGrFYht.jpg',
+  'https://i.imgur.com/GwaFnsr.jpg',
+  'https://i.imgur.com/yk2JZbM.jpg',
+  'https://i.imgur.com/KQVloLJ.jpg',
+  'https://i.imgur.com/bzf588c.jpg',
+  'https://i.imgur.com/1UUgV9a.jpg',
+  'https://i.imgur.com/VRZPyLh.jpg',
+  'https://i.imgur.com/b7kavU0.jpg',
+  'https://i.imgur.com/jHa8VlI.jpg',
+  'https://i.imgur.com/9k4NbTH.jpg'
 ];
 
 const gameTypes = ['Action', 'Adventure', 'Shooter', 'MMORPG'/*, 'RPG', 'Strategy', 'Puzzle', 'Sports', 'Racing', 'Fighting'*/];
@@ -68,7 +68,7 @@ const randomNumber = (number) => {
 
 const createUser = () => {
   const user = {};
-  user.userName = faker.name.findName().replace(/'/g, "\'");
+  user.userName = faker.name.firstName();
   user.email = faker.internet.email();
   user.password = faker.internet.password();
   user.region = `${regions[randomNumber(regions.length)]}`;
@@ -99,8 +99,7 @@ const createFriendship = () => {
 
 const createGame = () => {
   const game = {};
-  const escapedGameName = faker.lorem.words();
-  game.gameName = escapedGameName;
+  game.gameName = faker.lorem.words();
   game.coverImage = imageUrls[randomNumber(imageUrls.length)];
   game.type = gameTypes[randomNumber(gameTypes.length)];
   game.description = faker.lorem.sentences();
