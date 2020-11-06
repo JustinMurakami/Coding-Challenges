@@ -60,4 +60,4 @@ CREATE TABLE userGames (
   userId int NOT NULL,
   gameId int NOT NULL,
   PRIMARY KEY (ID)
-);
+);I

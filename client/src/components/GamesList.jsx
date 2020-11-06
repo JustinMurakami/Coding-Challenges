@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 import Game from './Game.jsx';
 
 export default class GamesList extends React.Component {
@@ -25,6 +26,13 @@ export default class GamesList extends React.Component {
   }
 
   render() {
+    //styled components
+    const StyledGameBlocks = styled.div`
+      display: flex;
+      flex-wrap: wrap;
+    `;
+
+    //mapped game blocks
     const { games } = this.state;
     const { handleClick } = this.props;
     const GameBlocks = games.map((game) => {
@@ -32,9 +40,9 @@ export default class GamesList extends React.Component {
     })
 
     return (
-      <div>
+      <StyledGameBlocks>
         {GameBlocks}
-      </div>
+      </StyledGameBlocks>
     );
   }
 }
