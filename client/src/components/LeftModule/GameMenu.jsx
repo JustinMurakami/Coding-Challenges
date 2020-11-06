@@ -30,17 +30,6 @@ export default class GameMenu extends React.Component {
 
   render() {
     //styled components
-    const StyledGameMenuContainer = styled.div`
-      position: absolute;
-      width: 464px;
-      height: 520px;
-      left: 55px;
-      top: 21px;
-
-      background: linear-gradient(180deg, #3B0069 0%, rgba(255, 255, 255, 0) 100%), #2853A5;
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-    `;
 
     //conditional render modal
     const modalShow = this.state.modalShow;
