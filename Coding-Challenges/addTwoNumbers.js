@@ -12,35 +12,19 @@
  */
 
 var addTwoNumbers = function(l1, l2) {
-  var storageArray = [];
-  var search = (node1, node2, excess) => {
-    if (node1 && node2) {
-      if (node1.val + node2.val + excess <= 9) {
-        storageArray.push(node1.val + node2.val + excess);
-        search(node1.next, node2.next, 0);
-      } else if (node.val + node2.val + excess > 9) {
-        storageArray.push(node1.val + node2.val + excess - 10);
-        search(node1.next, node2.next, 1);
-      }
-    } else if (node1 && !node2) {
-      if (node1.val + excess <= 9) {
-        storageArray.push(node1.val + excess);
-        search(node1.next, null, 0);
-      } else if (node1.val + excess > 9) {
-        storageArray.push(node1.val + excess - 10);
-        search(node1.next, null, 1);
-      }
-    } else if (node2 && !node1) {
-      if (node2.val + excess <= 9) {
-        storageArray.push(node2.val + excess);
-        search(node2.next, null, 0);
-      } else if (node2.val + excess > 9) {
-        storageArray.push(node2.val + excess - 10);
-        search(node2.next, null, 1);
-      }
-    }
+  let node = null;
+  const carry = arguments[2];
+  if (l1 || l2) {
+    const val1 = l1 ? l1.val : 0;
+    const val2 = l2 ? l2.val : 0;
+    const next1 = l1 ? l1.next : null;
+    const next2 = l2 ? l2.next : null;
+    const val = carry ? val1 + val2 + 1 : val1 + val2;
+    node = new ListNode(val % 10);
+    node.next = addTwoNumbers(next1, next2, val >= 10);
+  } else if (carry) {
+    node = new ListNode(1)
+    node.next = null;
   }
-  search(l1, l2, 0);
-  var result = Number(storageArray.join(''));
-  return result;
+  return node
 };
